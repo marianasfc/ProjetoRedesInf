@@ -1,2 +1,2 @@
-# Template para o Projeto de Complementos de Redes
+# Projeto de Redes informáticas
 
