@@ -1,25 +1,29 @@
-body {
+.header{
+    width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template-rows: 20vh 1fr 7vh;
-    background: #34495e;
-    font: normal 300 18px "Roboto", sans-serif;
+    background-image: url(core/fundo\ final.jpg);
+    background-position: center center;
+    background-size: cover;
 }
 
-header {
-    background-color: #b3d9ff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    padding: 5vh;
+nav{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
 }
 
-header.h1{
-    font-style: Arial, Helvetica, sans-serif;
+nav ul{
+    background: black;
+    width: 100%;
+    margin-top: 10px;
 }
 
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+    color: #fff;
+}
 
 main {
     padding: 5vw;
@@ -32,42 +36,42 @@ footer{
     align-items: center;
 }
 
-div#novos {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 5ch;
+.logo{
+    width: 175px;
+    margin: 20px 0;
+    margin-left: 50px;
+    cursor: pointer;
+    color: white;
+    font-family: lobster;
+    font-size: 75px;
+    text-align: center;
+}   
+
+.logo span{
+    color: #db5461;
 }
 
-div.botoes {
-    width:100%;
+nav .logo{
+    text-align: center;
+}
+
+.text{
+    padding: 20px 8%;
+}
+
+nav.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px 8%;
+    background: #000;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    margin-top: 2ch;
+    transition: padding 1s;
 }
 
-div.conteudo, h5 {
-    min-width: 50vw;
-    list-style-type: none;
-    background-color: whitesmoke;
-    padding: 0.5ch 1ch;
-    margin-bottom: 1ch;
-    display: flex;
-    
-    justify-content: space-between; 
+nav.sticky ul{
+    width: auto;
+
 }
-
-div.left{
-    float: left;
-      width: 50%;
-      text-align: center;
-}
-
-h5 {
-    margin-top: 3ch;
-}
-
-
-

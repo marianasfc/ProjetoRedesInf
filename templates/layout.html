@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoRe</title>
+    <title>Projeto de Redes Informáticas</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕸</text></svg>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     {% load static %}
@@ -13,21 +13,41 @@
 
 </head>
 <body>
-    <header>
-        {% load static %}
-        <img src="{% static 'core\logo.png' %}" width="300px" alt="">
-        <nav>
-            <a href="{% url 'core:index' %}" class="btn btn-primary  btn-sm" >Home</a>
-            <a href="{% url 'core:topicos' %}" class="btn btn-warning  btn-sm" >Topicos</a>    
-            <a href="{% url 'core:conversor' %}" class="btn btn-warning  btn-sm" >unidades logaritmicas</a>    
-            <a href="{% url 'core:limite' %}" class="btn btn-warning  btn-sm" >limites fundamentais</a> 
+    <div class="header">
+        <nav id="navbar">
+            <img src="static/core/logo.png" class="logo">
+            <ul id="menu">
+                <li>Home</li>
+                <li>Porpose</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
         </nav>
-    </header>
+    </div>
+    
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing</p>
+    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing</p>
+    
+    <script>
+        var navbar = document.getElementById("navbar");
+        var menu = document.getElementById("menu");
 
+        window.onscroll = function(){
+            if(window.pageYOffset >= menu.offsetTop){
+                navbar.classList.add("sticky");
+            }
+            else{
+                navbar.classList.remove("sticky");
+            }
+        }
+
+    </script>
+
+    
     <main>
         <div>
             {% block main %}
-
+                
             {% endblock main %}        
         </div>
     </main>
