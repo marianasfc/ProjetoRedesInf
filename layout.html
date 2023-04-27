@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Redes Informáticas</title>
+    <link rel="icon" href="static/core/transferir.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+
+
+</head>
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <img src="static/core/logo.png" class="logo">
+            <ul id="menu">
+                <a href="{% url 'core:index' %}"class="button"> <span>Home</span></a>
+                <a href="{% url 'core:index' %}"class="button"> <span>Propose</span></a>
+                <a href="{% url 'core:index' %}"class="button"> <span>About</span></a>
+                <a href="{% url 'core:index' %}"class="button"> <span>Contact us</span></a>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="maintext">
+        <div class="title">
+            <h1>Abstract</h1>
+        </div>
+        <p class="text">This paper explores the concept of Simultaneous Wireless Information and Power Transfer (SWIPT) technology and its increasing significance in the development of 
+                sustainable and eco-friendly wireless networks. We discuss the basic principles of SWIPT and its various applications, including wireless charging, energy harvesting, 
+                and wireless communication. We also highlight the main reasons why SWIPT is important, such as energy efficiency, cost savings, environmental sustainability, flexibility, 
+                and scalability. The purpose of this paper is to provide readers with a better understanding of SWIPT technology and its potential benefits for the development of sustainable 
+                wireless networks.</p>
+           
+    </div>
+    
+    
+    <script>
+        var navbar = document.getElementById("navbar");
+        var menu = document.getElementById("menu");
+
+        window.onscroll = function(){
+            if(window.pageYOffset >= menu.offsetTop){
+                navbar.classList.add("sticky");
+            }
+            else{
+                navbar.classList.remove("sticky");
+            }
+        }
+
+    </script>
+
+    
+    <main>
+        <div>
+            {% block main %}
+                
+            {% endblock main %}        
+        </div>
+    </main>
+
+    <footer>
+        Universidade Lusófona @ 2022
+    </footer>
+
+</body>
+</html>
